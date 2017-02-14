@@ -19,7 +19,6 @@ RUN apt-get update && \
     apt-get update && \
     sudo apt-get install git -y && \
     sudo apt-get install ruby-full -y && \
-    sudo gem install rhc && \
     apt-get clean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
