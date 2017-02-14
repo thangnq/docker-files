@@ -18,6 +18,8 @@ RUN apt-get update && \
     add-apt-repository ppa:git-core/ppa && \
     apt-get update && \
     sudo apt-get install git -y && \
+    sudo apt-get install -y ruby-full && \
+    sudo gem install rhc && \
     apt-get clean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
@@ -46,9 +48,6 @@ ENV TERM xterm
 
 RUN wget -qO- "http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.24/bin/apache-tomcat-8.0.24.tar.gz" | tar -zx --strip-components=1 -C /home/user/tomcat8 && \
     rm -rf /home/user/tomcat8/webapps/*
- 
-RUN sudo apt-get install -y ruby-full && \
-    sudo gem install rhc
 
 ENV LANG en_GB.UTF-8
 ENV LANG en_US.UTF-8
