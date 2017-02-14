@@ -47,8 +47,8 @@ ENV TERM xterm
 RUN wget -qO- "http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.24/bin/apache-tomcat-8.0.24.tar.gz" | tar -zx --strip-components=1 -C /home/user/tomcat8 && \
     rm -rf /home/user/tomcat8/webapps/*
  
-RUN apt-get install -y ruby-full && \
-    gem install rhc
+RUN sudo apt-get install -y ruby-full && \
+    sudo gem install rhc
 
 ENV LANG en_GB.UTF-8
 ENV LANG en_US.UTF-8
