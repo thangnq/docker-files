@@ -17,7 +17,9 @@ RUN apt-get update && \
     echo "secret\nsecret" | passwd user && \
     add-apt-repository ppa:git-core/ppa && \
     apt-get update && \
-    sudo apt-get install git ruby-full net-ssh -y && \   
+    sudo apt-get install git -y && \
+    sudo apt-get install ruby-full -y && \
+    sudo apt-get install net-ssh -y && \   
     apt-get clean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
